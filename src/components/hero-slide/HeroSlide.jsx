@@ -37,7 +37,7 @@ const HeroSlide = () => {
 
 	return (
 		<div className="hero-slide">
-			<Swiper modules={[Autoplay]} grabCursor={true} spaceBetween={0} slidesPerView={1}>
+			<Swiper modules={[Autoplay]} grabCursor={true} spaceBetween={0} slidesPerView={1} autoplay={{ delay: 3000 }}>
 				{movieItems.map((item, i) => (
 					<SwiperSlide key={i}>{({ isActive }) => <HeroSlideItem item={item} className={`${isActive ? 'active' : ''}`} />}</SwiperSlide>
 				))}
